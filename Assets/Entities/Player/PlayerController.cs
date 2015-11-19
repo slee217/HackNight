@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		MovePlayer();
         shoot();
-        cooldown();
+        //cooldown();
     }
 
 	void MovePlayer (){
@@ -66,8 +66,8 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    void cooldown()
+    /*void cooldown()
     {
 
-    }
+    } */
 }
