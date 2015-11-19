@@ -5,7 +5,7 @@ public class Projectile : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Quaternion.AngleAxis(-90, Vector3.forward);
+        transform.rotation = Quaternion.Euler( 0,0,-90 );
 	}
 	
 	// Update is called once per frame
