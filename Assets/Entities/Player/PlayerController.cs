@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		MovePlayer();
-        shoot();
+        Shoot();
         //cooldown();
     }
 
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour {
 
     }
 
-    void shoot()
+    void Shoot()
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
