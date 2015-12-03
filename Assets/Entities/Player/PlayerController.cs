@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerController : MonoBehaviour
-{
+public class PlayerController : MonoBehaviour {
 
 	public float speed = 15f;
 	public float padding = 1f;
@@ -14,8 +13,7 @@ public class PlayerController : MonoBehaviour
     private float ymax;
 
 	// Use this for initialization
-	void Start ()
-    {
+	void Start () {
 		float distance = transform.position.z - Camera.main.transform.position.z;
 		Vector3 bottommost = Camera.main.ViewportToWorldPoint(new Vector3(0f,0f,distance));
 		Vector3 topmost = Camera.main.ViewportToWorldPoint(new Vector3(0f,1f,distance));
@@ -28,30 +26,23 @@ public class PlayerController : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update ()
-    {
+	void Update () {
 		MovePlayer();
         shoot();
         //cooldown();
     }
 
-	void MovePlayer ()
-    {
-		if (Input.GetKey(KeyCode.LeftArrow))
-        {
+	void MovePlayer (){
+		if (Input.GetKey(KeyCode.LeftArrow)){
 			transform.position += Vector3.left * speed * Time.deltaTime;
 		}
-
-		if (Input.GetKey(KeyCode.RightArrow))
-        {
+		if (Input.GetKey(KeyCode.RightArrow)){
 			transform.position += Vector3.right * speed * Time.deltaTime;
 		}
-
         if (Input.GetKey(KeyCode.DownArrow))
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
         }
-
         if (Input.GetKey(KeyCode.UpArrow))
         {
             transform.position += Vector3.up * speed * Time.deltaTime;
